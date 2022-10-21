@@ -57,13 +57,13 @@ contract BallotV {
         return fee == Payment ? true : false;
     }
     function timeIsOvercheck() view public returns (bool) {
-        return block.timestamp < (deployDate + 10 days);
+        return block.timestamp < (deployDate + Duration * 1 days);
     }
 
 
 //check time and get results
     modifier timeIsOver(){ 
-            require(block.timestamp >= (deployDate + 10 days), "Time is not up");
+            require(block.timestamp >= (deployDate + Duration * 1 days), "Time is not up");
             _;
     }
     function ResultsWhenTimeIsUp() external timeIsOver {
@@ -88,7 +88,7 @@ contract BallotV {
 
 //withdraw fees
     modifier timeIsOverandonlyOwner(){ 
-            require(block.timestamp < (deployDate + 10 days), "Wait, the voting has not finished.");
+            require(block.timestamp < (deployDate + Duration * 1 days), "Wait, the voting has not finished.");
             require(msg.sender == owner, "You can not withdraw fees, you are not an owner!");
             _;
     }
