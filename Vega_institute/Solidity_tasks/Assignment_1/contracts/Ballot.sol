@@ -41,6 +41,7 @@ contract BallotV {
     function VoteFor(address candidate) external payable {
         require(validCandidate(candidate), "Wrong candidate");
         require(validFee(msg.value), "Wrong fee value");
+        require(timeIsOvercheck(), "Time is over!");
         CountVote[candidate] += 1;
     }
 
@@ -52,9 +53,11 @@ contract BallotV {
         }
         return false;
     } 
-
     function validFee(uint fee) view public returns (bool) {
         return fee == Payment ? true : false;
+    }
+    function timeIsOvercheck() view public returns (bool) {
+        return block.timestamp < (deployDate + 10 days);
     }
 
 
