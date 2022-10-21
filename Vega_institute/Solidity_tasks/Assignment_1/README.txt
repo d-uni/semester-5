@@ -6,4 +6,4 @@ The contract was deployed with Metamask.
 [Contract 0xd5c2e1e790a1f003b822207b7b742f5193490e38]
 (From account: 0x880cDf6493838E8cC0FEcfa7E1A728744ED16bC7)
 
-[link to etherscan](https://goerli.etherscan.io/tx/0xd5e37b79e65ba90d0860474f69eba99de483488a3af313f43431e621c8097298)
+ [link to etherscan](https://goerli.etherscan.io)
