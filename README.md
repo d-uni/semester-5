@@ -1,2 +1,4 @@
 # semester-5
-R & python & solodity - programs
+ML_CMC - Machine Learning course (2022)
+Vega_institute - Block Chain course
+prac_cmc - practicum 
